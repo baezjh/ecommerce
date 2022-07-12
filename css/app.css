@@ -1,0 +1,233 @@
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*convierte 1 REM = 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif; /*fuentes*/
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/*** Globales ***/
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif; /*fuentes*/
+    margin: 0 0 5rem 0;
+}  /*son elementos que aplican a todo el proyecto*/
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+a {
+   text-decoration: none;
+   color: #000; 
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    display: block;  /**imagen con separación con el texto**/
+}
+
+.btn { /*boton*/
+    background-color: #8cbc00;
+    display: block;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color .3s ease-out; /*Efecto del boton*/
+}
+.btn:hover {
+    background-color: #769c02; /*Valor de color para el efecto del boton*/
+} 
+
+
+/*** Utilidades ***/ 
+.text-center {
+    text-align: center;
+}
+
+/*** Header y Navegación ***/
+.nombre-sitio {
+    margin-top: 5rem;
+    text-align: center; 
+}
+
+.nombre-sitio span {
+    color: #037bc0; 
+}
+
+.contenedor-navegacion {
+    border-top: .1rem solid #e1e1e1;
+}
+
+.nav-principal {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 55rem;
+}
+
+/***Categorías***/
+.categorias {
+    padding-top: 5rem;
+}
+
+.categoria a {
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover {
+    background-color: #037bc0;
+    color: #FFFFFF;
+    border-bottom-right-radius: 1rem;
+}
+
+.listado-categorias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/*** Bloque nosotros ***/
+.sobre-nosotros {
+    margin-top: 5rem;
+    padding-top: 5rem;
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
+    background-position: left center;
+    padding: 10rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%, 120rem;
+}
+
+.sobre-nosotros-flex {
+    display: flex;
+    justify-content: flex-end;
+} /*Utilicé flexbox para el posicionamiento de contenido texto*/
+
+.texto-nosotros {
+    flex-basis: 50%;
+    padding-left: 10rem;
+    color: #FFF;    
+}
+
+/*** Listado de productos ***/
+.contenido-principal {
+    padding-top: 5rem;
+} 
+.listado-productos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+}
+.producto:nth-child(1) { /*selecciono el primer producto para trabajarlo*/
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.producto:nth-child(1) img {
+    height: 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.producto:nth-child(2) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+.producto:nth-child(3) img {
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+}
+.producto:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.producto:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.producto:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+.producto {
+    background-color: #037bc0;
+}
+.texto-producto {
+    text-align: center;
+    color: #FFF;
+    padding: 2rem;
+}
+.texto-producto h3 {
+    margin: 0;
+}
+.texto-producto p {
+    margin: 0 0 .5rem 0;
+}
+.texto-producto .precio {
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+
+/*** Footer ***/
+.site-footer {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+.site-footer h3 {
+    margin-bottom: .5rem;
+}
+.grid-footer {
+    display: grid;  
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; 
+}
+.footer-menu a {
+    display: block;
+}
+.copyright {
+    margin-top: 5rem;
+    text-align: center;
+}
